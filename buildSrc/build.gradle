@@ -1,3 +1,8 @@
+
+// https://mwping.github.io/android/gradle-plugin.html
+// https://issuetracker.google.com/issues/232438924
+// https://juejin.cn/post/6864349303843307534
+
 apply plugin: 'groovy'
 //apply plugin: 'org.jetbrains.kotlin.android'
 
@@ -10,7 +15,6 @@ repositories {
     mavenCentral()
 }
 
-//https://mwping.github.io/android/gradle-plugin.html
 
 buildscript {
     ext.kotlin_version = '1.7.20'
