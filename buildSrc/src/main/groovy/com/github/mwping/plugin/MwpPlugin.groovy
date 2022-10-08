@@ -10,6 +10,6 @@ class MwpPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
         MwpLogger logger = new MwpLogger(project)
-        logger.error("apply MwpPlugin #thelou1s")
+        logger.error("MwpPlugin.groovy apply #thelou1s")
     }
 }

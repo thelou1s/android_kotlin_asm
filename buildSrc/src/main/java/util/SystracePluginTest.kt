@@ -1,9 +1,10 @@
+@file:Suppress("UNNECESSARY_SAFE_CALL")
+
 package util
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
-@Suppress("UNNECESSARY_SAFE_CALL")
 class SystracePluginTest : Plugin<Project> {
     override fun apply(project: Project) {
         when {
@@ -11,7 +12,8 @@ class SystracePluginTest : Plugin<Project> {
                 val extension = project.extensions.getByName ("android") /*as AppExtension*/
                 extension?.let {
                     //it.registerTransform(TestTransFormO)
-                    println("thelou1s123")
+                    //val logger = MwpLogger(project)
+                    println("SystracePluginTest.kt apply $it")
                 }
             }
         }
