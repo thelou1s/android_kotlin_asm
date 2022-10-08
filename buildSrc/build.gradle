@@ -1,0 +1,13 @@
+apply plugin: 'groovy'
+//apply plugin: 'org.jetbrains.kotlin.android'
+
+dependencies {
+    implementation gradleApi() //gradle sdk
+    implementation localGroovy() //groovy sdk
+}
+
+repositories {
+    mavenCentral()
+}
+
+//https://mwping.github.io/android/gradle-plugin.html
