@@ -5,7 +5,7 @@ package util
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
-class SystracePluginTest : Plugin<Project> {
+class SystracePlugin : Plugin<Project> {
     override fun apply(project: Project) {
         when {
             project.plugins.hasPlugin("com.android.application") -> {

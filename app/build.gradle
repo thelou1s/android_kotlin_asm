@@ -1,11 +1,12 @@
-import util.SystracePluginTest
+import com.github.mwping.plugin.MwpPlugin
+import util.SystracePlugin
 
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
-apply plugin: com.github.mwping.plugin.MwpPlugin
-apply plugin: SystracePluginTest
+apply plugin: MwpPlugin
+apply plugin: SystracePlugin
 
 android {
     compileSdkVersion 33
