@@ -2,9 +2,13 @@
 // https://mwping.github.io/android/gradle-plugin.html
 // https://issuetracker.google.com/issues/232438924
 // https://juejin.cn/post/6864349303843307534
+// https://stackoverflow.com/questions/41799549/is-the-android-transform-api-for-gradle-deprecated
 
 apply plugin: 'groovy'
 //apply plugin: 'org.jetbrains.kotlin.android'
+
+apply plugin: 'org.jetbrains.kotlin.jvm'
+apply plugin: 'java-gradle-plugin'
 
 dependencies {
     implementation gradleApi() //gradle sdk
@@ -12,7 +16,9 @@ dependencies {
 }
 
 repositories {
+    google()
     mavenCentral()
+    maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
 }
 
 
@@ -21,7 +27,8 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
     }
 
     dependencies {
@@ -33,4 +40,8 @@ apply plugin: 'kotlin'
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "com.android.tools.build:gradle-api:7.3.0"
+
+    implementation 'org.ow2.asm:asm:7.1'
+    implementation 'org.ow2.asm:asm-commons:7.1'
 }

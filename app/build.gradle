@@ -1,5 +1,6 @@
 import com.github.mwping.plugin.MwpPlugin
 import util.SystracePlugin
+import util.XXXPlugin
 
 plugins {
     id 'com.android.application'
@@ -7,6 +8,7 @@ plugins {
 }
 apply plugin: MwpPlugin
 apply plugin: SystracePlugin
+apply plugin: XXXPlugin
 
 android {
     compileSdkVersion 33
@@ -43,7 +45,4 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
-    implementation 'org.ow2.asm:asm:7.1'
-    implementation 'org.ow2.asm:asm-commons:7.1'
 }
